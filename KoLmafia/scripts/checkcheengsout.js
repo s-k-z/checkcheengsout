@@ -236,6 +236,7 @@ const items = [
   "icy hairspray",
   "Iiti Kitty Gumdrop",
   "Illuminati earpiece",
+  "imported taffy",
   "industrial strength starch",
   "infrablack lipstick",
   "invisibility cream",
@@ -535,7 +536,7 @@ module.exports.main = main;
 
 function main() {
   const avg = Math.round(
-    items.reduce((sum, name) => (sum += historicalPrice(toItem(name))), 0) /
+    items.reduce((sum, name) => sum + historicalPrice(toItem(name)), 0) /
       4 /
       items.length
   );
